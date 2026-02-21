@@ -10,7 +10,7 @@ def rename_columns(df_raw):
     cols = cols.str.replace("original_titlê", "original_title", regex=False)
     cols = cols.str.replace("genrë¨", "genre", regex=False)
     cols = cols.str.replace("unnamed:_8", "unnamed_8", regex=False)
-
+    # I could have just done the characters instead of the full column name.
     df.columns = cols
     return df
 
